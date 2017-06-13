@@ -1,0 +1,15 @@
+{
+  "name": "safehouse",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "body-parser": "latest",
+    "cookie-parser": "latest",
+    "express": "latest",
+    "morgan": "latest",
+    "twilio": "latest"
+  }
+}
