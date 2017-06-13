@@ -1,15 +1,23 @@
-let mysql      = require('mysql');
+let mysql = require('mysql');
 
 var connection = mysql.createConnection({
-  host     : '127.0.0.1',
-  user     : 'root',
-  password : 'password',
+  host: '127.0.0.1',
+  user: 'root',
+  password: 'password',
 });
 
-connection.connect(function(err) {
-  console.log('connected to mysql')
-});
-
-let entries = function(){
-  // create table
+let createEntries = function () {
+  if (err) throw err;
+  let sql = "CREATE TABLE entries (uid VARCHAR(255), entry_datetime VARCHAR(255))";
+  con.query(sql, function (err, result) {
+    if (err) throw err;
+    console.log("Table created");
+  });
 }
+
+connection.connect(function (err) {
+  console.log('connected to mysql')
+  //createEntries()
+});
+
+
