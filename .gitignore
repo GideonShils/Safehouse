@@ -1,3 +1,4 @@
-node_modules
-secrets.js
-.vscode
+server/node_modules
+client/node_modules
+server/secrets.js
+server/.vscode
