@@ -6,7 +6,8 @@ let logger = require('morgan');
 let cookieParser = require('cookie-parser');
 let bodyParser = require('body-parser');
 
-let routes = require('./routes/routes');
+let routes = require('./api/routes');
+let db = require('./api/db')
 
 let app = express();
 
@@ -22,4 +23,3 @@ app.use('/', routes);
 
 app.listen(port);
 console.log('Server listening on ' + port)
-
