@@ -40,6 +40,7 @@ export class AppComponent {
             this.red = 'grey';
   				}
   				else {
+            this.header = 'Incorrect, try again';
   					// Display failure
   					// COME BACK
   				}
@@ -56,11 +57,13 @@ export class AppComponent {
   				if (this.ledColor == 'green') {
             this.orange = 'grey';
             this.green = 'green';
+            this.header = 'Success';
   					// Display success
   				}
   				else {
             this.orange = 'grey';
             this.red = 'red';
+            this.header = 'Incorrect, try again';
   					// Display failure
   					// COME BACK
   				}

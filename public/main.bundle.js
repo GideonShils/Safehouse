@@ -86,6 +86,7 @@ var AppComponent = (function () {
                         _this.red = 'grey';
                     }
                     else {
+                        _this.header = 'Incorrect, try again';
                         // Display failure
                         // COME BACK
                     }
@@ -100,11 +101,13 @@ var AppComponent = (function () {
                     if (_this.ledColor == 'green') {
                         _this.orange = 'grey';
                         _this.green = 'green';
+                        _this.header = 'Success';
                         // Display success
                     }
                     else {
                         _this.orange = 'grey';
                         _this.red = 'red';
+                        _this.header = 'Incorrect, try again';
                         // Display failure
                         // COME BACK
                     }
