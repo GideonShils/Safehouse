@@ -27,7 +27,7 @@ export class AppComponent {
 
         console.log("Sending authentication 1 to server. Code: " + this.code);
   			// Send code to server and validate
-  			this.httpService.postCode(this.auth, this.code).subscribe(response => {
+  			this.httpService.postCode(this.auth, parseInt(this.code)).subscribe(response => {
   				this.ledColor = response.result;
 
   				// If code was correct, move to next auth step
@@ -49,7 +49,7 @@ export class AppComponent {
 
         console.log("Sending authentication 2 to server. Code: " + this.code);
   			// Send code to server and validate
-  			this.httpService.postCode(this.auth, this.code).subscribe(response => {
+  			this.httpService.postCode(this.auth, parseInt(this.code)).subscribe(response => {
   				this.ledColor = response.result;
 
   				// If code was correct, move to next auth step
@@ -73,8 +73,9 @@ export class AppComponent {
   	}
 
   	// Maybe update this as a feature?
-  	else if (button == '*') {
-  		// Do nothing
+  	else if (button == 'C') {
+  		this.code = '';
+      this.header = 'Enter code';
   	}
 
   	else {
