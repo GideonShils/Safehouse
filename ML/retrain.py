@@ -5,8 +5,5 @@ import datetime as datetime
 from sklearn.preprocessing import OneHotEncoder
 import pymysql
 
-def main():
+def retrain():
 	
-
-if __name__ == '__main__':
-	main()
