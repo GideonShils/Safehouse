@@ -16,6 +16,9 @@ export class AppComponent {
   ledColor = 'red';
   code = '';
   auth = 1;
+  red = 'red';
+  orange = 'grey';
+  green = 'grey';
 
   padPress(button) {
 
@@ -25,7 +28,6 @@ export class AppComponent {
   		// Send first authentication
   		if (this.auth == 1) {
 
-        console.log("Sending authentication 1 to server. Code: " + this.code);
   			// Send code to server and validate
   			this.httpService.postCode(this.auth, parseInt(this.code)).subscribe(response => {
   				this.ledColor = response.result;
@@ -34,10 +36,10 @@ export class AppComponent {
   				if (this.ledColor == 'orange') {
   					this.auth = 2;
   					// Display success
-            console.log("Changing to orange");
+            this.orange = 'orange';
+            this.red = 'grey';
   				}
   				else {
-            console.log("Staying at red");
   					// Display failure
   					// COME BACK
   				}
@@ -46,19 +48,19 @@ export class AppComponent {
 
   		// Send second authentication
   		if (this.auth == 2) {
-
-        console.log("Sending authentication 2 to server. Code: " + this.code);
   			// Send code to server and validate
   			this.httpService.postCode(this.auth, parseInt(this.code)).subscribe(response => {
   				this.ledColor = response.result;
 
   				// If code was correct, move to next auth step
   				if (this.ledColor == 'green') {
-            console.log("Changing to green");
+            this.orange = 'grey';
+            this.green = 'green';
   					// Display success
   				}
   				else {
-            console.log("Changing back to red");
+            this.orange = 'grey';
+            this.red = 'red';
   					// Display failure
   					// COME BACK
   				}
