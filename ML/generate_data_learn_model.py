@@ -49,7 +49,7 @@ def trainModel(data):
 	return clf
 
 def saveData(data):
-	with open('training_data.csv', 'w') as myfile:
+	with open('ML/training_data.csv', 'w') as myfile:
 	    wr = csv.writer(myfile, quoting=csv.QUOTE_ALL)
 	    wr.writerows(data)
 
