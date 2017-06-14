@@ -8,31 +8,45 @@ import pymysql
 def predict():
 	# Connect to the database
 	connection = pymysql.connect(host='127.0.0.1',
-	                             user='root',
-	                             password='password',
-	                             db='db',
-	                             cursorclass=pymysql.cursors.DictCursor)
+									user='root',
+									password='password',
+									db='safehouse')
 
 	try:
-	    with connection.cursor() as cursor:
-	        # Read a single record
-	        sql_user1 = "SELECT * FROM `entries` ORDER BY id DESC LIMIT 1"
-	        cursor.execute(sql)
-	        result = cursor.fetchone()
+		with connection.cursor() as cursor:
+			# Read a single record
 
-	        ###load the existing model
+			print('Rretriving most recent entry attempt...')
+			sql = "SELECT * FROM `entries` ORDER BY uid DESC LIMIT 1"
+			cursor.execute(sql)
+			result = cursor.fetchone()
+			print('Attempt retrival successful!')
+
+
+			###load the existing model
+			print('Loading anomaly classifier...')
+			clf = pickle.load(open("ML/model.pkl", "rb"))
+			print('Classifier load successful!')
 
 			###match these up for correct preprocessing of result
-			for entry in data:
-				X.append([entry[0], entry[1].hour])
-				y.append(entry[2])
-			enc = OneHotEncoder()
-			X = enc.fit_transform(X)
-
-			pred = clf.predict() #what are we predicting?
-
-			return pred
-
+			print('Anomaly classification begin...')
+			X = np.array([int(result[0]) * 100, result[1].hour])
+			enc = OneHotEncoder([24],[1], sparse=False)
+			fit_X = enc.fit_transform(X)
+			y_pred = clf.predict(fit_X)
+			if y_pred[0]:
+				print('Anomaly detected!!! Submitting alert to database!')
+				sql = "UPDATE entries SET anomalous_bool = 1 where uid = " + result[0] + " and entry_datetime = '" + result[1].isoformat(' ') + "'"
+			else:
+				print('Entry accepted. All clear!')
+				sql = "UPDATE entries SET anomalous_bool = 0 where uid = " + result[0] + " and entry_datetime = '" + result[1].isoformat(' ') + "'"
+			cursor.execute(sql)
 
 	finally:
-	    connection.close()
+		connection.close()
+
+def main():
+	predict()
+
+if __name__ == '__main__':
+	main()
