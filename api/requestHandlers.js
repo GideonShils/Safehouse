@@ -6,14 +6,13 @@ let randomCode;
 
 let auth = function (req, res) {
 
-    if (req.body.auth === 1 && req.body.code === 1365) {
-        randomCode = sms.sendSMS();
-        res.send(JSON.stringify({ result: 'orange' }));
-        
-       /* con.query('SELECT * FROM entries', function (error, results, fields) {
-            if (error) throw error;
-            console.log(results[0]);
-        });*/
+    if (req.body.auth === 1) {
+
+        con.query('SELECT DISTINCT uid, code, phone FROM entries WHERE code =' + req.body.code, function (err, results, fields) {
+            if (err) console.log(err);
+            randomCode = sms.sendSMS(results[0].phone);
+            res.send(JSON.stringify({ result: 'orange' }));
+        });
 
     } else if (req.body.auth === 2 && req.body.code === randomCode) {
         res.send(JSON.stringify({ result: 'green' }));
