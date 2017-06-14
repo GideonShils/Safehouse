@@ -57,14 +57,29 @@ export class AppComponent {
             this.orange = 'orange';
             this.red = 'grey';
             this.header = 'SMS sent';
-            setTimeout(()=> this.header = 'Enter second code', 1000);
+            setTimeout(()=> this.header = 'Enter second code', 2000);
   				}
           else if (this.level == 'blocked') {
             var counter = 10;
             var intervalId = 0;
 
             // Blink all red 3 times and keep all red
-            this.header = "Blocked.";
+            this.header = "blocked.";
+            this.red = "red";
+            this.orange = "red";
+            this.green = "red";
+            this.red = "grey";
+            this.orange = "grey";
+            this.green = "grey";
+            this.red = "red";
+            this.orange = "red";
+            this.green = "red";
+            this.red = "grey";
+            this.orange = "grey";
+            this.green = "grey";
+            this.red = "red";
+            this.orange = "red";
+            this.green = "red";
 
             // Lock for 10 seconds
             this.locked = true;
@@ -88,7 +103,13 @@ export class AppComponent {
   				else {
             this.header = 'Incorrect, try again';
             // Make red blink
-            setTimeout(()=> this.header = 'Enter code', 1000);
+            setTimeout(()=> this.header = 'Enter code', 2000);
+            this.red = 'grey';
+            this.red = 'red';
+            this.red = 'grey';
+            this.red = 'red';
+            this.red = 'grey';
+            this.red = 'red';
   				}
   			});
   		}
@@ -103,7 +124,7 @@ export class AppComponent {
   				if (this.level == 'green') {
             this.header = 'Success';
             this.green = 'green';
-            this.orange = 'grey;'
+            this.orange = 'grey';
             setTimeout(()=> this.header = 'Enter code', 2000);
             setTimeout(()=> this.red = 'red', 2000);
             setTimeout(()=> this.green = 'grey', 2000);
@@ -111,10 +132,14 @@ export class AppComponent {
   				}
   				else {
             this.header = 'Incorrect, try again';
-            setTimeout(()=> this.header = 'Enter code', 1000);
+            setTimeout(()=> this.header = 'Enter code', 2000);
             // Make red blink
   					this.red = 'red';
             this.orange = 'grey';
+            this.red = 'grey';
+            this.red = 'red';
+            this.red = 'grey';
+            this.red = 'red';
   				}
   			});
 

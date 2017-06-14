@@ -88,13 +88,28 @@ var AppComponent = (function () {
                             _this.orange = 'orange';
                             _this.red = 'grey';
                             _this.header = 'SMS sent';
-                            setTimeout(function () { return _this.header = 'Enter second code'; }, 1000);
+                            setTimeout(function () { return _this.header = 'Enter second code'; }, 2000);
                         }
                         else if (_this.level == 'blocked') {
                             var counter = 10;
                             var intervalId = 0;
                             // Blink all red 3 times and keep all red
-                            _this.header = "Blocked.";
+                            _this.header = "blocked.";
+                            _this.red = "red";
+                            _this.orange = "red";
+                            _this.green = "red";
+                            _this.red = "grey";
+                            _this.orange = "grey";
+                            _this.green = "grey";
+                            _this.red = "red";
+                            _this.orange = "red";
+                            _this.green = "red";
+                            _this.red = "grey";
+                            _this.orange = "grey";
+                            _this.green = "grey";
+                            _this.red = "red";
+                            _this.orange = "red";
+                            _this.green = "red";
                             // Lock for 10 seconds
                             _this.locked = true;
                             intervalId = setInterval(function () {
@@ -114,7 +129,13 @@ var AppComponent = (function () {
                         else {
                             _this.header = 'Incorrect, try again';
                             // Make red blink
-                            setTimeout(function () { return _this.header = 'Enter code'; }, 1000);
+                            setTimeout(function () { return _this.header = 'Enter code'; }, 2000);
+                            _this.red = 'grey';
+                            _this.red = 'red';
+                            _this.red = 'grey';
+                            _this.red = 'red';
+                            _this.red = 'grey';
+                            _this.red = 'red';
                         }
                     });
                 }
@@ -127,17 +148,21 @@ var AppComponent = (function () {
                         if (_this.level == 'green') {
                             _this.header = 'Success';
                             _this.green = 'green';
-                            _this.orange = 'grey;';
+                            _this.orange = 'grey';
                             setTimeout(function () { return _this.header = 'Enter code'; }, 2000);
                             setTimeout(function () { return _this.red = 'red'; }, 2000);
                             setTimeout(function () { return _this.green = 'grey'; }, 2000);
                         }
                         else {
                             _this.header = 'Incorrect, try again';
-                            setTimeout(function () { return _this.header = 'Enter code'; }, 1000);
+                            setTimeout(function () { return _this.header = 'Enter code'; }, 2000);
                             // Make red blink
                             _this.red = 'red';
                             _this.orange = 'grey';
+                            _this.red = 'grey';
+                            _this.red = 'red';
+                            _this.red = 'grey';
+                            _this.red = 'red';
                         }
                     });
                     // Reset to one no matter what (for next user or for failure)
