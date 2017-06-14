@@ -5,8 +5,9 @@ let exec = require('child_process').exec;
 let con = require('../api/db').con;
 let sms = require('../api/sms');
 let randomCode;
-let user;
 let entry_datetime;
+let user;
+let blockedCounter = 0
 
 let auth = function (req, res) {
     if (req.body.auth === 1) {
@@ -22,7 +23,7 @@ let auth = function (req, res) {
         con.query('SELECT DISTINCT uid, code, phone FROM entries WHERE code =' + req.body.code, function (err, results, fields) {
             if (err) console.log(err);
             if (results[0] !== undefined) {
-                randomCode = sms.sendSMS(results[0].phone);
+                randomCode = sms.sendSMS(results[0].phone, 'Your code is ');
 
                 user = {
                     uid: results[0].uid,
@@ -41,13 +42,21 @@ let auth = function (req, res) {
                         console.log(stdout);
                     });
                 });
-
                 res.send(JSON.stringify({ result: 'orange' }));
             } else {
-                con.query('UPDATE entries SET train_bool = ? where uid = ? and entry_datetime = ?', ['0', user.uid, entry_datetime], function (err, results, fields) {
-                    if (err) console.log(err);
-                });
-                res.send(JSON.stringify({ result: 'red' }));
+                if (user != undefined) {
+                    con.query('UPDATE entries SET train_bool = ? where uid = ? and entry_datetime = ?', ['0', user.uid, entry_datetime], function (err, results, fields) {
+                        if (err) console.log(err);
+                    });
+                }
+                blockedCounter++;
+                if (blockedCounter === 5) {
+                    sms.sendSMS('19293442441', 'There have been numerous failed attempts to enter your home and we have blocked access. Code: ')
+                    res.send(JSON.stringify({ result: 'blocked' }));
+                    blockedCounter = 0; //reset
+                } else {
+                    res.send(JSON.stringify({ result: 'red' }));
+                }
                 randomCode = undefined; //reset
             }
         });
@@ -63,13 +72,21 @@ let auth = function (req, res) {
                 console.log(stdout);
             });
         });
-        res.send(JSON.stringify({ result: 'green' }));
         randomCode = undefined; //reset
+        blockedCounter = 0; //reset
+        user = undefined; //reset
+        res.send(JSON.stringify({ result: 'green' }));
     } else {
         con.query('UPDATE entries SET train_bool = ? where uid = ? and entry_datetime = ?', ['0', user.uid, entry_datetime], function (err, results, fields) {
             if (err) console.log(err);
         });
-        res.send(JSON.stringify({ result: 'red' }));
+        if (blockedCounter === 5) {
+            sms.sendSMS('19293442441', 'There have been numerous failed attempts to enter your home and we have blocked access. Code: ')
+            res.send(JSON.stringify({ result: 'blocked' }));
+            blockedCounter = 0; //reset
+        } else {
+            res.send(JSON.stringify({ result: 'red' }));
+        }
         randomCode = undefined; //reset
     }
 }
