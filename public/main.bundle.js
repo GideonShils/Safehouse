@@ -74,7 +74,7 @@ var AppComponent = (function () {
     }
     AppComponent.prototype.padPress = function (button) {
         var _this = this;
-        if (!this.locked)
+        if (!this.locked) {
             // Send code
             if (button == '#') {
                 // Send first authentication
@@ -93,23 +93,26 @@ var AppComponent = (function () {
                         else if (_this.level == 'blocked') {
                             var counter = 10;
                             var intervalId = 0;
-                            // Blink all red 3 times and keep all red
                             _this.header = "blocked.";
-                            _this.red = "red";
-                            _this.orange = "red";
-                            _this.green = "red";
-                            _this.red = "grey";
-                            _this.orange = "grey";
-                            _this.green = "grey";
-                            _this.red = "red";
-                            _this.orange = "red";
-                            _this.green = "red";
-                            _this.red = "grey";
-                            _this.orange = "grey";
-                            _this.green = "grey";
-                            _this.red = "red";
-                            _this.orange = "red";
-                            _this.green = "red";
+                            // Blink all lights red 3 times seconds
+                            _this.red = 'grey';
+                            setTimeout(function () { return _this.red = 'red'; }, 300);
+                            setTimeout(function () { return _this.red = 'grey'; }, 600);
+                            setTimeout(function () { return _this.red = 'red'; }, 900);
+                            setTimeout(function () { return _this.red = 'grey'; }, 1200);
+                            setTimeout(function () { return _this.red = 'red'; }, 1500);
+                            setTimeout(function () { return _this.orange = 'red'; }, 300);
+                            setTimeout(function () { return _this.orange = 'grey'; }, 600);
+                            setTimeout(function () { return _this.orange = 'red'; }, 900);
+                            setTimeout(function () { return _this.orange = 'grey'; }, 1200);
+                            setTimeout(function () { return _this.orange = 'red'; }, 1500);
+                            setTimeout(function () { return _this.orange = 'grey'; }, 1800);
+                            setTimeout(function () { return _this.green = 'red'; }, 300);
+                            setTimeout(function () { return _this.green = 'grey'; }, 600);
+                            setTimeout(function () { return _this.green = 'red'; }, 900);
+                            setTimeout(function () { return _this.green = 'grey'; }, 1200);
+                            setTimeout(function () { return _this.green = 'red'; }, 1500);
+                            setTimeout(function () { return _this.green = 'grey'; }, 1800);
                             // Lock for 10 seconds
                             _this.locked = true;
                             intervalId = setInterval(function () {
@@ -130,12 +133,13 @@ var AppComponent = (function () {
                             _this.header = 'Incorrect, try again';
                             // Make red blink
                             setTimeout(function () { return _this.header = 'Enter code'; }, 2000);
+                            // Blink red 3 times
                             _this.red = 'grey';
-                            _this.red = 'red';
-                            _this.red = 'grey';
-                            _this.red = 'red';
-                            _this.red = 'grey';
-                            _this.red = 'red';
+                            setTimeout(function () { return _this.red = 'red'; }, 300);
+                            setTimeout(function () { return _this.red = 'grey'; }, 600);
+                            setTimeout(function () { return _this.red = 'red'; }, 900);
+                            setTimeout(function () { return _this.red = 'grey'; }, 1200);
+                            setTimeout(function () { return _this.red = 'red'; }, 1500);
                         }
                     });
                 }
@@ -149,6 +153,7 @@ var AppComponent = (function () {
                             _this.header = 'Success';
                             _this.green = 'green';
                             _this.orange = 'grey';
+                            // Reset for next person
                             setTimeout(function () { return _this.header = 'Enter code'; }, 2000);
                             setTimeout(function () { return _this.red = 'red'; }, 2000);
                             setTimeout(function () { return _this.green = 'grey'; }, 2000);
@@ -156,13 +161,13 @@ var AppComponent = (function () {
                         else {
                             _this.header = 'Incorrect, try again';
                             setTimeout(function () { return _this.header = 'Enter code'; }, 2000);
-                            // Make red blink
-                            _this.red = 'red';
                             _this.orange = 'grey';
-                            _this.red = 'grey';
-                            _this.red = 'red';
-                            _this.red = 'grey';
-                            _this.red = 'red';
+                            // Blink red 3 times
+                            setTimeout(function () { return _this.red = 'red'; }, 300);
+                            setTimeout(function () { return _this.red = 'grey'; }, 600);
+                            setTimeout(function () { return _this.red = 'red'; }, 900);
+                            setTimeout(function () { return _this.red = 'grey'; }, 1200);
+                            setTimeout(function () { return _this.red = 'red'; }, 1500);
                         }
                     });
                     // Reset to one no matter what (for next user or for failure)
@@ -174,12 +179,19 @@ var AppComponent = (function () {
             else if (button == 'C') {
                 this.code = '';
                 this.header = 'Enter code';
+                // Blink red 3 times
+                this.red = 'grey';
+                setTimeout(function () { return _this.red = 'red'; }, 300);
+                setTimeout(function () { return _this.red = 'grey'; }, 600);
+                setTimeout(function () { return _this.red = 'red'; }, 900);
+                setTimeout(function () { return _this.red = 'grey'; }, 1200);
+                setTimeout(function () { return _this.red = 'red'; }, 1500);
             }
             else {
                 this.code += button;
                 this.header = this.code;
             }
-        console.log(this.code);
+        }
     };
     return AppComponent;
 }());

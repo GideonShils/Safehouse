@@ -40,128 +40,146 @@ export class AppComponent {
   locked = false;
 
   padPress(button) {
-    if (!this.locked)
-  	// Send code
-  	if (button == '#') {
+    if (!this.locked) {
+    	// Send code
+    	if (button == '#') {
 
-  		// Send first authentication
-  		if (this.auth == 1) {
+    		// Send first authentication
+    		if (this.auth == 1) {
 
-  			// Send code to server and validate
-  			this.httpService.postCode(this.auth, parseInt(this.code)).subscribe(response => {
-  				this.level = response.result;
+    			// Send code to server and validate
+    			this.httpService.postCode(this.auth, parseInt(this.code)).subscribe(response => {
+    				this.level = response.result;
 
-  				// If code was correct, move to next auth step
-  				if (this.level == 'orange') {
-  					this.auth = 2;
-            this.orange = 'orange';
-            this.red = 'grey';
-            this.header = 'SMS sent';
-            setTimeout(()=> this.header = 'Enter second code', 2000);
-  				}
-          else if (this.level == 'blocked') {
-            var counter = 10;
-            var intervalId = 0;
+    				// If code was correct, move to next auth step
+    				if (this.level == 'orange') {
+    					this.auth = 2;
+              this.orange = 'orange';
+              this.red = 'grey';
+              this.header = 'SMS sent';
+              setTimeout(()=> this.header = 'Enter second code', 2000);
+    				}
+            // If code was entered incorrectly 5 times, block
+            else if (this.level == 'blocked') {
+              var counter = 10;
+              var intervalId = 0;
 
-            // Blink all red 3 times and keep all red
-            this.header = "blocked.";
-            this.red = "red";
-            this.orange = "red";
-            this.green = "red";
-            this.red = "grey";
-            this.orange = "grey";
-            this.green = "grey";
-            this.red = "red";
-            this.orange = "red";
-            this.green = "red";
-            this.red = "grey";
-            this.orange = "grey";
-            this.green = "grey";
-            this.red = "red";
-            this.orange = "red";
-            this.green = "red";
+              this.header = "blocked.";
 
-            // Lock for 10 seconds
-            this.locked = true;
-            intervalId = setInterval(() => {
-              if (counter != 0) {
-                counter--;
-              }
-              else {
-                this.locked = false;
-                clearInterval(intervalId);
-                this.header = 'Enter code';
-                counter = 10;
-                this.orange = 'grey';
-                this.red = 'grey';
+              // Blink all lights red 3 times seconds
+              this.red = 'grey';
+              setTimeout(() => this.red = 'red', 300);
+              setTimeout(() => this.red = 'grey', 600);
+              setTimeout(() => this.red = 'red', 900);
+              setTimeout(() => this.red = 'grey', 1200);
+              setTimeout(() => this.red = 'red', 1500);
 
+              setTimeout(() => this.orange = 'red', 300);
+              setTimeout(() => this.orange = 'grey', 600);
+              setTimeout(() => this.orange = 'red', 900);
+              setTimeout(() => this.orange = 'grey', 1200);
+              setTimeout(() => this.orange = 'red', 1500);
+              setTimeout(() => this.orange = 'grey', 1800);
 
-              }
-            }, 1000)
+              setTimeout(() => this.green = 'red', 300);
+              setTimeout(() => this.green = 'grey', 600);
+              setTimeout(() => this.green = 'red', 900);
+              setTimeout(() => this.green = 'grey', 1200);
+              setTimeout(() => this.green = 'red', 1500);
+              setTimeout(() => this.green = 'grey', 1800);
 
-          }
-  				else {
-            this.header = 'Incorrect, try again';
-            // Make red blink
-            setTimeout(()=> this.header = 'Enter code', 2000);
-            this.red = 'grey';
-            this.red = 'red';
-            this.red = 'grey';
-            this.red = 'red';
-            this.red = 'grey';
-            this.red = 'red';
-  				}
-  			});
-  		}
+              // Lock for 10 seconds
+              this.locked = true;
+              intervalId = setInterval(() => {
+                if (counter != 0) {
+                  counter--;
+                }
+                else {
+                  this.locked = false;
+                  clearInterval(intervalId);
+                  this.header = 'Enter code';
+                  counter = 10;
+                  this.orange = 'grey';
+                  this.red = 'grey';
+                }
+              }, 1000)
 
-  		// Send second authentication
-  		if (this.auth == 2) {
-  			// Send code to server and validate
-  			this.httpService.postCode(this.auth, parseInt(this.code)).subscribe(response => {
-  				this.level = response.result;
+            }
+            // If code was incorrect, ask to try again
+    				else {
+              this.header = 'Incorrect, try again';
+              // Make red blink
+              setTimeout(()=> this.header = 'Enter code', 2000);
+              
+              // Blink red 3 times
+              this.red = 'grey';
+              setTimeout(() => this.red = 'red', 300);
+              setTimeout(() => this.red = 'grey', 600);
+              setTimeout(() => this.red = 'red', 900);
+              setTimeout(() => this.red = 'grey', 1200);
+              setTimeout(() => this.red = 'red', 1500);
+    				}
+    			});
+    		}
 
-  				// If code was correct, move to next auth step
-  				if (this.level == 'green') {
-            this.header = 'Success';
-            this.green = 'green';
-            this.orange = 'grey';
-            setTimeout(()=> this.header = 'Enter code', 2000);
-            setTimeout(()=> this.red = 'red', 2000);
-            setTimeout(()=> this.green = 'grey', 2000);
+    		// Send second authentication
+    		if (this.auth == 2) {
+    			// Send code to server and validate
+    			this.httpService.postCode(this.auth, parseInt(this.code)).subscribe(response => {
+    				this.level = response.result;
 
-  				}
-  				else {
-            this.header = 'Incorrect, try again';
-            setTimeout(()=> this.header = 'Enter code', 2000);
-            // Make red blink
-  					this.red = 'red';
-            this.orange = 'grey';
-            this.red = 'grey';
-            this.red = 'red';
-            this.red = 'grey';
-            this.red = 'red';
-  				}
-  			});
+    				// If code was correct, move to next auth step
+    				if (this.level == 'green') {
+              this.header = 'Success';
+              this.green = 'green';
+              this.orange = 'grey';
 
-        // Reset to one no matter what (for next user or for failure)
-        this.auth = 1;
-  		}
+              // Reset for next person
+              setTimeout(()=> this.header = 'Enter code', 2000);
+              setTimeout(()=> this.red = 'red', 2000);
+              setTimeout(()=> this.green = 'grey', 2000);
 
-  		// Reset code and authentication level
-  		this.code = '';
-  	}
+    				}
+    				else {
+              this.header = 'Incorrect, try again';
+              setTimeout(()=> this.header = 'Enter code', 2000);
+              this.orange = 'grey';
 
-  	// Maybe update this as a feature?
-  	else if (button == 'C') {
-  		this.code = '';
-      this.header = 'Enter code';
-  	}
+              // Blink red 3 times
+              setTimeout(() => this.red = 'red', 300);
+              setTimeout(() => this.red = 'grey', 600);
+              setTimeout(() => this.red = 'red', 900);
+              setTimeout(() => this.red = 'grey', 1200);
+              setTimeout(() => this.red = 'red', 1500);
+    				}
+    			});
 
-  	else {
-  		this.code += button;
-      this.header = this.code;
-  	}
+          // Reset to one no matter what (for next user or for failure)
+          this.auth = 1;
+    		}
 
-  	console.log(this.code);
+    		// Reset code and authentication level
+    		this.code = '';
+    	}
+
+    	// Clear code
+    	else if (button == 'C') {
+    		this.code = '';
+        this.header = 'Enter code';
+
+        // Blink red 3 times
+        this.red = 'grey';
+        setTimeout(() => this.red = 'red', 300);
+        setTimeout(() => this.red = 'grey', 600);
+        setTimeout(() => this.red = 'red', 900);
+        setTimeout(() => this.red = 'grey', 1200);
+        setTimeout(() => this.red = 'red', 1500);
+    	}
+
+    	else {
+    		this.code += button;
+        this.header = this.code;
+    	}
+    }
   }
 }
