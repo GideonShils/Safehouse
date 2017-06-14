@@ -21,7 +21,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "#container {\n\ttext-align: center;\n\twidth: 75%;\n  max-width: 700px;\n\tmargin: 0 auto;\n\tmargin-top: 30px;\n}\n\n#logo {\n\twidth: 110px;\n}\n\n#container h1 {\n\tfont-family: 'Roboto', sans-serif;\n\tfont-weight: 100;\n\tcolor: #fff;\n\tmargin: 0;\n}\n\n#container h2 {\n\tfont-family: 'Roboto', sans-serif;\n\tfont-weight: 100;\n\tmargin: 20px;\n}\n\n\n/* Keypad */\n.keypadwrapper {\n  padding: 15px;\n  text-align: center;\n  width: 75%;\n  border-radius: 6px;\n  background: rgba(255,255,255,0.7);\n  color: #93959B;\n  margin: 0 auto;\n  margin-top: 40px;\n  -webkit-box-shadow: 0px 0px 53px -11px rgba(0,0,0,0.4);\n    moz-box-shadow: 0px 0px 53px -11px rgba(0,0,0,0.4);\n    box-shadow: 0px 0px 53px -11px rgba(0,0,0,0.4);\n}\n\n.keypadwrapper .keypad .numberline {\n  width: 100%;\n}\n\n.keypadwrapper .keypad .content {\n  display: inline-block;\n  margin: 0 8%;\n}\n\n.keypadwrapper .keypad .content div {\n  width: 4em;\n  height: 4em;\n  text-align: center;\n  border: 1px solid #93959B;\n  border-radius: 70px;\n  display: inline-block;\n  margin-top: 20px;\n  cursor: pointer;\n  -webkit-touch-callout: none;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none; /* Safari */\n  transition: background-color 300ms, color 300ms;\n}\n\n.keypadwrapper .keypad .content div span:nth-child(1) {\n  display: block;\n  font-size: 1.8em;\n  height: 1em;\n  margin-top: 0.2em;\n  margin-top: 0.4em;\n}\n\n.keypadwrapper .keypad .content div:hover {\n  background-color: #787BA4;\n  color: #fff;\n  border: 1px solid #787BA4;\n  -webkit-touch-callout: none;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n}\n\n.keypadwrapper .keypad #linefour {\n\tmargin-bottom: 30px;\n}\n\n.nocircle {\n  width: auto !important;\n  border: none !important;\n  height: auto !important;\n}\n\n.led {\n  display: inline-block;\n  margin: 20px;\n  width: 25px;\n  height: 25px;\n  border-radius: 50%;\n}\n\n.greyText {\n  color: #93959B;\n}\n\n.redText {\n  color: #D06041;\n}\n\n.greenText {\n  color: #59BB37;\n}\n\n@media all and (max-width: 710px) {\n\n  #container {\n    text-align: center;\n    width: 100%;\n    max-width: 100%;\n    margin: 0 auto;\n    margin-top: 30px;\n  }\n\n\t.keypadwrapper .keypad .content {\n  \t\tdisplay: inline-block;\n  \t\tmargin: 0 6%;\n\t\t}\n\n  \t.keypadwrapper .keypad .content div {\n  \t\twidth: 3em;\n  \t\theight: 3em;\n  \t}\n\n  \t.keypadwrapper .keypad .content div span:nth-child(1) {\n  \t\tfont-size: 1.2em;\n      margin-top: 11px;\n\t}\n}", ""]);
+exports.push([module.i, "#container {\n\ttext-align: center;\n\twidth: 75%;\n  max-width: 700px;\n\tmargin: 0 auto;\n\tmargin-top: 30px;\n}\n\n#logo {\n\twidth: 110px;\n}\n\n#container h1 {\n\tfont-family: 'Roboto', sans-serif;\n\tfont-weight: 100;\n\tcolor: #fff;\n\tmargin: 0;\n}\n\n#container h2 {\n\tfont-family: 'Roboto', sans-serif;\n\tfont-weight: 100;\n\tmargin: 20px;\n}\n\n\n/* Keypad */\n.keypadwrapper {\n  padding: 15px;\n  text-align: center;\n  width: 75%;\n  border-radius: 6px;\n  background: rgba(255,255,255,0.7);\n  color: #6FA8D1;\n  margin: 0 auto;\n  margin-top: 40px;\n  -webkit-box-shadow: 0px 0px 53px -11px rgba(0,0,0,0.4);\n    moz-box-shadow: 0px 0px 53px -11px rgba(0,0,0,0.4);\n    box-shadow: 0px 0px 53px -11px rgba(0,0,0,0.4);\n}\n\n.keypadwrapper .keypad .numberline {\n  width: 100%;\n}\n\n.keypadwrapper .keypad .content {\n  display: inline-block;\n  margin: 0 8%;\n}\n\n.keypadwrapper .keypad .content div {\n  width: 4em;\n  height: 4em;\n  text-align: center;\n  border: 1px solid #6FA8D1;\n  border-radius: 70px;\n  display: inline-block;\n  margin-top: 20px;\n  cursor: pointer;\n  -webkit-touch-callout: none;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none; /* Safari */\n  transition: background-color 300ms, color 300ms;\n}\n\n.keypadwrapper .keypad .content div span:nth-child(1) {\n  display: block;\n  font-size: 1.8em;\n  height: 1em;\n  margin-top: 0.2em;\n  margin-top: 0.4em;\n}\n\n.keypadwrapper .keypad .content div:hover {\n  background-color: #6FA8D1;\n  color: #fff;\n  border: 1px solid #6FA8D1;\n  -webkit-touch-callout: none;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n}\n\n.keypadwrapper .keypad #linefour {\n\tmargin-bottom: 30px;\n}\n\n.nocircle {\n  width: auto !important;\n  border: none !important;\n  height: auto !important;\n}\n\n.led {\n  display: inline-block;\n  margin: 20px;\n  width: 25px;\n  height: 25px;\n  border-radius: 50%;\n}\n\n.blueText {\n  color: #6FA8D1;\n}\n\n.redText {\n  color: #BC5163;\n}\n\n.greenText {\n  color: #70C278;\n}\n\n@media all and (max-width: 710px) {\n\n  #container {\n    text-align: center;\n    width: 100%;\n    max-width: 100%;\n    margin: 0 auto;\n    margin-top: 30px;\n  }\n\n\t.keypadwrapper .keypad .content {\n  \t\tdisplay: inline-block;\n  \t\tmargin: 0 6%;\n\t\t}\n\n  \t.keypadwrapper .keypad .content div {\n  \t\twidth: 3em;\n  \t\theight: 3em;\n  \t}\n\n  \t.keypadwrapper .keypad .content div span:nth-child(1) {\n  \t\tfont-size: 1.2em;\n      margin-top: 11px;\n\t}\n}", ""]);
 
 // exports
 
@@ -67,7 +67,7 @@ var AppComponent = (function () {
         this.code = '';
         this.auth = 1;
         this.level = 'red';
-        this.headerColor = 'greyText';
+        this.headerColor = 'blueText';
         this.red = 'red';
         this.orange = 'grey';
         this.green = 'grey';
@@ -126,7 +126,7 @@ var AppComponent = (function () {
                                     counter = 10;
                                     _this.orange = 'grey';
                                     _this.green = 'grey';
-                                    _this.headerColor = 'greyText';
+                                    _this.headerColor = 'blueText';
                                 }
                             }, 1000);
                         }
@@ -199,13 +199,13 @@ AppComponent = __decorate([
         animations: [
             __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["i" /* trigger */])('changeColor', [
                 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["j" /* state */])('red', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["h" /* style */])({
-                    backgroundColor: '#DF5835',
+                    backgroundColor: '#BC5163',
                 })),
                 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["j" /* state */])('orange', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["h" /* style */])({
                     backgroundColor: '#F6C346',
                 })),
                 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["j" /* state */])('green', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["h" /* style */])({
-                    backgroundColor: '#99C356',
+                    backgroundColor: '#70C278',
                 })),
                 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["j" /* state */])('grey', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["h" /* style */])({
                     backgroundColor: '#93959B',

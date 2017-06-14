@@ -9,13 +9,13 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
   animations: [
     trigger('changeColor', [
       state('red', style({
-        backgroundColor: '#DF5835',
+        backgroundColor: '#BC5163',
       })),
       state('orange', style({
         backgroundColor: '#F6C346',
       })),
       state('green', style({
-        backgroundColor: '#99C356',
+        backgroundColor: '#70C278',
       })),
       state('grey', style({
         backgroundColor: '#93959B',
@@ -34,7 +34,7 @@ export class AppComponent {
   code = '';
   auth = 1;
   level = 'red';
-  headerColor = 'greyText';
+  headerColor = 'blueText';
   red: string = 'red';
   orange: string = 'grey';
   green: string = 'grey';
@@ -101,7 +101,7 @@ export class AppComponent {
                   counter = 10;
                   this.orange = 'grey';
                   this.green = 'grey';
-                  this.headerColor = 'greyText';
+                  this.headerColor = 'blueText';
                 }
               }, 1000)
             }

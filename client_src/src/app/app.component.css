@@ -31,7 +31,7 @@
   width: 75%;
   border-radius: 6px;
   background: rgba(255,255,255,0.7);
-  color: #93959B;
+  color: #6FA8D1;
   margin: 0 auto;
   margin-top: 40px;
   -webkit-box-shadow: 0px 0px 53px -11px rgba(0,0,0,0.4);
@@ -52,7 +52,7 @@
   width: 4em;
   height: 4em;
   text-align: center;
-  border: 1px solid #93959B;
+  border: 1px solid #6FA8D1;
   border-radius: 70px;
   display: inline-block;
   margin-top: 20px;
@@ -77,9 +77,9 @@
 }
 
 .keypadwrapper .keypad .content div:hover {
-  background-color: #787BA4;
+  background-color: #6FA8D1;
   color: #fff;
-  border: 1px solid #787BA4;
+  border: 1px solid #6FA8D1;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -106,16 +106,16 @@
   border-radius: 50%;
 }
 
-.greyText {
-  color: #93959B;
+.blueText {
+  color: #6FA8D1;
 }
 
 .redText {
-  color: #D06041;
+  color: #BC5163;
 }
 
 .greenText {
-  color: #59BB37;
+  color: #70C278;
 }
 
 @media all and (max-width: 710px) {
