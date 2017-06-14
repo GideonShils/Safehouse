@@ -63,7 +63,7 @@ export class AppComponent {
             // If code was entered incorrectly 5 times, block
             else if (this.level == 'blocked') {
               var counter = 10;
-              var intervalId = 0;
+              var intervalId;
 
               this.headerColor = 'redText';
               this.header = "BLOCKED";
@@ -161,7 +161,9 @@ export class AppComponent {
     		}
 
     		// Reset code and authentication level
-    		this.code = '';
+        if (!this.locked) {
+    		  this.code = '';
+        }
     	}
 
     	// Clear code

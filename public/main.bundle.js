@@ -93,7 +93,7 @@ var AppComponent = (function () {
                         }
                         else if (_this.level == 'blocked') {
                             var counter = 10;
-                            var intervalId = 0;
+                            var intervalId;
                             _this.headerColor = 'redText';
                             _this.header = "BLOCKED";
                             // Blink all lights red 3 times seconds
@@ -177,7 +177,9 @@ var AppComponent = (function () {
                     this.auth = 1;
                 }
                 // Reset code and authentication level
-                this.code = '';
+                if (!this.locked) {
+                    this.code = '';
+                }
             }
             else if (button == 'C') {
                 this.code = '';
