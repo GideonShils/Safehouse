@@ -5,6 +5,7 @@ import { HttpModule, JsonpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { HttpPostService } from './http-post.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { HttpPostService } from './http-post.service';
     BrowserModule,
     FormsModule,
     HttpModule,
-    JsonpModule
+    JsonpModule,
+    BrowserAnimationsModule
   ],
   providers: [HttpPostService],
   bootstrap: [AppComponent]

@@ -87,8 +87,8 @@
         </div>
       </div>
     </div>
-    <div [ngClass]="red" class="led"></div>
-    <div [ngClass]="orange" class="led"></div>
-    <div [ngClass]="green" class="led"></div>
+
+    <!-- LED -->
+    <div [@changeColor]='state' class="led"></div>
   </div>
 </div>

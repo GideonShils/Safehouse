@@ -9,10 +9,11 @@ export class HttpPostService {
 
   constructor(private http: Http) { }
 
+  // Set request URL
   private url:string = '/auth';
 
-  // Sends code and recieves verification response
-  // 
+  // Sends code and authentication step
+  // Returns 
   postCode(authNum, codeNum) {
 
   	var json = JSON.stringify({

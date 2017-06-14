@@ -1,10 +1,25 @@
 import { Component } from '@angular/core';
 import { HttpPostService } from './http-post.service';
+import { trigger, state, style, transition, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  animations: [
+    trigger('changeColor', [
+      state('red', style({
+        backgroundColor: '#DF5835',
+      })),
+      state('orange', style({
+        backgroundColor: '#F6C346',
+      })),
+      state('green', style({
+        backgroundColor: '#99C356',
+      })),
+      transition('* <=> *', animate('100ms ease-in')),
+    ]),
+  ]
 })
 export class AppComponent {
 
@@ -16,9 +31,14 @@ export class AppComponent {
   ledColor = 'red';
   code = '';
   auth = 1;
-  red = 'red';
-  orange = 'grey';
-  green = 'grey';
+  state: string = 'red';
+
+  clickMe() {
+    if (this.state === 'red') {
+      this.state = 'green';
+    }
+    
+  }
 
   padPress(button) {
 
@@ -35,13 +55,11 @@ export class AppComponent {
   				// If code was correct, move to next auth step
   				if (this.ledColor == 'orange') {
   					this.auth = 2;
-  					// Display success
-            this.orange = 'orange';
-            this.red = 'grey';
+            this.state = 'orange';
+            this.header = 'SMS sent';
   				}
   				else {
             this.header = 'Incorrect, try again';
-  					// Display failure
   					// COME BACK
   				}
   			});
@@ -55,16 +73,12 @@ export class AppComponent {
 
   				// If code was correct, move to next auth step
   				if (this.ledColor == 'green') {
-            this.orange = 'grey';
-            this.green = 'green';
+            this.state = 'green';
             this.header = 'Success';
-  					// Display success
   				}
   				else {
-            this.orange = 'grey';
-            this.red = 'red';
+            this.state = 'red';
             this.header = 'Incorrect, try again';
-  					// Display failure
   					// COME BACK
   				}
   			});
@@ -89,28 +103,5 @@ export class AppComponent {
   	}
 
   	console.log(this.code);
-
-
-  }
-
-
-  onEnterOne() {
-  	var code = 1365; // CHANGE THIS
-
-  	// Send code to server and validate
-  	this.httpService.postCode(this.auth, code).subscribe(response => this.ledColor = response.result);
-
-  	// Check what the response was
-
-  	// If orange, proceed to next step
-  	if (this.ledColor == 'orange') {
-  		this.auth = 2;
-  		this.httpService.postCode(this.auth, code).subscribe(response => this.ledColor = response.result);
-  	}
-
-  	// If red, reset
-  	if (this.ledColor == 'red') {
-  		this.auth = 1;
-  	}
   }
 }
