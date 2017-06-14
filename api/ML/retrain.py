@@ -55,7 +55,7 @@ def retrain():
 			clf.fit(X, y)
 			print('Training complete!')
 			print('Saving model...')
-			pickle.dump(clf, open('ML/model.pkl', 'wb'))
+			pickle.dump(clf, open('/home/jgozal/Desktop/repos/safehouse/api/ML/model.pkl', 'wb'))
 			print('Model saved!')
 
 	finally:

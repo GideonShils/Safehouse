@@ -17,7 +17,7 @@ def predict():
 			# Read a single record
 
 			print('Rretriving most recent entry attempt...')
-			sql = "SELECT * FROM `entries` ORDER BY uid DESC LIMIT 1"
+			sql = "SELECT * FROM `entries` ORDER BY entry_datetime DESC LIMIT 1"
 			cursor.execute(sql)
 			result = cursor.fetchone()
 			print('Attempt retrival successful!')
@@ -25,7 +25,7 @@ def predict():
 
 			###load the existing model
 			print('Loading anomaly classifier...')
-			clf = pickle.load(open("ML/model.pkl", "rb"))
+			clf = pickle.load(open("/home/jgozal/Desktop/repos/safehouse/api/ML/model.pkl", "rb"))
 			print('Classifier load successful!')
 
 			###match these up for correct preprocessing of result
@@ -41,6 +41,7 @@ def predict():
 				print('Entry accepted. All clear!')
 				sql = "UPDATE entries SET anomalous_bool = 0 where uid = " + result[0] + " and entry_datetime = '" + result[1].isoformat(' ') + "'"
 			cursor.execute(sql)
+			connection.commit()
 
 	finally:
 		connection.close()
