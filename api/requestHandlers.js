@@ -40,6 +40,10 @@ let auth = function (req, res) {
                         if (err) console.log(err);
                         console.log('predicting anomalous behavior...')
                         console.log(stdout);
+                        con.query('SELECT * FROM entries ORDER BY entry_datetime DESC LIMIT 1', function (err, results, fields) {
+                            if (err) console.log(err);
+                            if (results[0].anomalous_bool == 1) sms.sendSMS(user.phone, 'Anomalous entry attempt detected at your home. Code:')
+                        });
                     });
                 });
                 res.send(JSON.stringify({ result: 'orange' }));
