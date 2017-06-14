@@ -34,6 +34,7 @@ export class AppComponent {
   code = '';
   auth = 1;
   level = 'red';
+  headerColor = 'greyText';
   red: string = 'red';
   orange: string = 'grey';
   green: string = 'grey';
@@ -64,7 +65,8 @@ export class AppComponent {
               var counter = 10;
               var intervalId = 0;
 
-              this.header = "blocked.";
+              this.headerColor = 'redText';
+              this.header = "BLOCKED";
 
               // Blink all lights red 3 times seconds
               this.red = 'grey';
@@ -79,14 +81,12 @@ export class AppComponent {
               setTimeout(() => this.orange = 'red', 900);
               setTimeout(() => this.orange = 'grey', 1200);
               setTimeout(() => this.orange = 'red', 1500);
-              setTimeout(() => this.orange = 'grey', 1800);
 
               setTimeout(() => this.green = 'red', 300);
               setTimeout(() => this.green = 'grey', 600);
               setTimeout(() => this.green = 'red', 900);
               setTimeout(() => this.green = 'grey', 1200);
               setTimeout(() => this.green = 'red', 1500);
-              setTimeout(() => this.green = 'grey', 1800);
 
               // Lock for 10 seconds
               this.locked = true;
@@ -100,10 +100,10 @@ export class AppComponent {
                   this.header = 'Enter code';
                   counter = 10;
                   this.orange = 'grey';
-                  this.red = 'grey';
+                  this.green = 'grey';
+                  this.headerColor = 'greyText';
                 }
               }, 1000)
-
             }
             // If code was incorrect, ask to try again
     				else {
@@ -133,11 +133,13 @@ export class AppComponent {
               this.header = 'Success';
               this.green = 'green';
               this.orange = 'grey';
+              this.headerColor = 'greenText';
 
               // Reset for next person
               setTimeout(()=> this.header = 'Enter code', 2000);
               setTimeout(()=> this.red = 'red', 2000);
               setTimeout(()=> this.green = 'grey', 2000);
+              setTimeout(()=> this.headerColor = 'greenText', 2000);
 
     				}
     				else {
@@ -166,14 +168,6 @@ export class AppComponent {
     	else if (button == 'C') {
     		this.code = '';
         this.header = 'Enter code';
-
-        // Blink red 3 times
-        this.red = 'grey';
-        setTimeout(() => this.red = 'red', 300);
-        setTimeout(() => this.red = 'grey', 600);
-        setTimeout(() => this.red = 'red', 900);
-        setTimeout(() => this.red = 'grey', 1200);
-        setTimeout(() => this.red = 'red', 1500);
     	}
 
     	else {

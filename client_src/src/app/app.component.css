@@ -1,6 +1,7 @@
 #container {
 	text-align: center;
 	width: 75%;
+  max-width: 700px;
 	margin: 0 auto;
 	margin-top: 30px;
 }
@@ -19,9 +20,7 @@
 #container h2 {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 100;
-	color: #93959B;
 	margin: 20px;
-	margin-bottom: 40px;
 }
 
 
@@ -73,16 +72,13 @@
   font-size: 1.8em;
   height: 1em;
   margin-top: 0.2em;
-}
-
-.keypadwrapper .keypad .content div span:nth-child(2) {
-  font-size: 0.6em;
+  margin-top: 0.4em;
 }
 
 .keypadwrapper .keypad .content div:hover {
-  background-color: #4FB7F9;
+  background-color: #793AF5;
   color: #fff;
-  border: 1px solid #4FB7F9;
+  border: 1px solid #793AF5;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -93,10 +89,6 @@
 
 .keypadwrapper .keypad #linefour {
 	margin-bottom: 30px;
-}
-
-.keypadwrapper .keypad #linefour div span:nth-child(1) {
-  margin-top: 0.4em;
 }
 
 .nocircle {
@@ -113,7 +105,27 @@
   border-radius: 50%;
 }
 
+.greyText {
+  color: #93959B;
+}
+
+.redText {
+  color: #D06041;
+}
+
+.greenText {
+  color: #59BB37;
+}
+
 @media all and (max-width: 710px) {
+
+  #container {
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
 
 	.keypadwrapper .keypad .content {
   		display: inline-block;
@@ -127,9 +139,6 @@
 
   	.keypadwrapper .keypad .content div span:nth-child(1) {
   		font-size: 1.2em;
-	}
-
-	.keypadwrapper .keypad .content div span:nth-child(2) {
- 		 font-size: 0.3em;
+      margin-top: 11px;
 	}
 }

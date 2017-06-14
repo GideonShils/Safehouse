@@ -7,25 +7,24 @@
 
   <!-- Keypad -->
   <div class="keypadwrapper">
-    <h2>{{header}}</h2>
+    <div [class]="headerColor">
+      <h2>{{header}}</h2>
+    </div>
     <div class="keypad">
       <div id="lineone" class="numberline">
         <div class="content" (click)="padPress(1)">
           <div>
             <span class="number">1</span>
-            <span>___</span>
           </div>
         </div>
         <div class="content" (click)="padPress(2)">
           <div>
             <span class="number">2</span>
-            <span>ABC</span>
           </div>
         </div>
         <div class="content" (click)="padPress(3)">
           <div>
             <span class="number">3</span>
-            <span>DEF</span>
           </div>
         </div>
       </div>
@@ -33,19 +32,17 @@
         <div class="content" (click)="padPress(4)">
           <div>
             <span class="number">4</span>
-            <span>GHI</span>
           </div>
         </div>
         <div class="content" (click)="padPress(5)">
           <div>
             <span class="number">5</span>
-            <span>JKL</span>
           </div>
         </div>
         <div class="content" (click)="padPress(6)">
           <div>
             <span class="number">6</span>
-            <span>MNO</span>
+
           </div>
         </div>
       </div>
@@ -53,19 +50,18 @@
         <div class="content" (click)="padPress(7)">
           <div>
             <span class="number">7</span>
-            <span>PQRS</span>
+
           </div>
         </div>
         <div class="content" (click)="padPress(8)">
           <div>
             <span class="number">8</span>
-            <span>TUV</span>
+
           </div>
         </div>
         <div class="content" (click)="padPress(9)">
           <div>
             <span class="number">9</span>
-            <span>WXYZ</span>
           </div>
         </div>
       </div>
