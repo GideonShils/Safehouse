@@ -1,3 +1,4 @@
+"uid","entry_datetime","anomalous_bool","train_bool","phone"
 "0","2016-03-07 19:26:00","False","True","19293442441"
 "0","2016-04-20 17:01:00","False","True","19293442441"
 "0","2016-11-28 17:51:00","False","True","19293442441"
