@@ -6,11 +6,11 @@ let authToken = secrets.authToken;
 let twilio = require('twilio');
 let client = new twilio(accountSid, authToken);
 
-let sendSMS = function () {
+let sendSMS = function (number) {
     randomCode = Math.floor(1000 + Math.random() * 9000);
     client.messages.create({
         body: 'Your code is ' + randomCode,
-        to: '+972526199424', // +19293442441  // Text this number
+        to: '+' + number, // Text this number
         from: '+15207292514' // From a valid Twilio number
     })
         .then((message) => console.log(message.sid));

@@ -4,4 +4,4 @@ fields terminated by ','
   escaped by '"'
   lines terminated by '\n'
   ignore 1 lines
-    (uid, entry_datetime, anomalous_bool, train_bool, phone);
+    (uid, entry_datetime, anomalous_bool, train_bool, phone, code);

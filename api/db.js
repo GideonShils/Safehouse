@@ -1,6 +1,6 @@
 let mysql = require('mysql');
 
-var con = mysql.createConnection({
+let con = mysql.createConnection({
   host: '127.0.0.1',
   user: 'root',
   password: 'password',
@@ -8,7 +8,7 @@ var con = mysql.createConnection({
 });
 
 let createEntries = function () {
-  let sql = "CREATE TABLE entries (uid VARCHAR(50) NOT NULL, entry_datetime DATETIME(6), anomalous_bool BOOL, train_bool BOOL, phone VARCHAR(50))";
+  let sql = "CREATE TABLE entries (uid VARCHAR(50) NOT NULL, entry_datetime DATETIME(6), anomalous_bool BOOL, train_bool BOOL, phone VARCHAR(50), code VARCHAR(50))";
   con.query(sql, function (err, result) {
     if (err) console.log(err);
     console.log("Entries table created");
@@ -20,5 +20,11 @@ con.connect(function (err) {
   console.log('connected to mysql')
   createEntries()
 });
+
+let db = {
+  con
+}
+
+module.exports = db;
 
 
