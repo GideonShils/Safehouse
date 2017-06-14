@@ -21,7 +21,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "#container {\n\ttext-align: center;\n\twidth: 75%;\n\tmargin: 0 auto;\n\tmargin-top: 30px;\n}\n\n#logo {\n\twidth: 110px;\n}\n\n#container h1 {\n\tfont-family: 'Roboto', sans-serif;\n\tfont-weight: 100;\n\tcolor: #93959B;\n\tmargin: 0;\n}\n\n#container h2 {\n\tfont-family: 'Roboto', sans-serif;\n\tfont-weight: 100;\n\tcolor: #93959B;\n\tmargin: 20px;\n\tmargin-bottom: 40px;\n}\n\n\n/* Keypad */\n.keypadwrapper {\n  padding: 15px;\n  text-align: center;\n  width: 75%;\n  background: #fff;\n  color: #93959B;\n  margin: 0 auto;\n  margin-top: 40px;\n  -webkit-box-shadow: 0px 0px 53px -11px rgba(0,0,0,0.4);\n    moz-box-shadow: 0px 0px 53px -11px rgba(0,0,0,0.4);\n    box-shadow: 0px 0px 53px -11px rgba(0,0,0,0.4);\n}\n\n.keypadwrapper .keypad .numberline {\n  width: 100%;\n}\n\n.keypadwrapper .keypad .content {\n  display: inline-block;\n  margin: 0 8%;\n}\n\n.keypadwrapper .keypad .content div {\n  width: 4em;\n  height: 4em;\n  text-align: center;\n  border: 1px solid #93959B;\n  border-radius: 70px;\n  display: inline-block;\n  margin-top: 20px;\n  cursor: pointer;\n  -webkit-touch-callout: none;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none; /* Safari */\n  transition: background-color 300ms, color 300ms;\n}\n\n.keypadwrapper .keypad .content div span:nth-child(1) {\n  display: block;\n  font-size: 1.8em;\n  height: 1em;\n  margin-top: 0.2em;\n}\n\n.keypadwrapper .keypad .content div span:nth-child(2) {\n  font-size: 0.6em;\n}\n\n.keypadwrapper .keypad .content div:hover {\n  background-color: #4FB7F9;\n  color: #fff;\n  border: 1px solid #4FB7F9;\n  -webkit-touch-callout: none;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n}\n\n.keypadwrapper .keypad #linefour {\n\tmargin-bottom: 30px;\n}\n\n.keypadwrapper .keypad #linefour div span:nth-child(1) {\n  margin-top: 0.4em;\n}\n\n.nocircle {\n  width: auto !important;\n  border: none !important;\n  height: auto !important;\n}\n\n.led {\n  display: inline-block;\n  margin: 20px;\n  width: 20px;\n  height: 20px;\n  border-radius: 50%;\n}\n\n@media all and (max-width: 710px) {\n\n\t.keypadwrapper .keypad .content {\n  \t\tdisplay: inline-block;\n  \t\tmargin: 0 6%;\n\t\t}\n\n  \t.keypadwrapper .keypad .content div {\n  \t\twidth: 3em;\n  \t\theight: 3em;\n  \t}\n\n  \t.keypadwrapper .keypad .content div span:nth-child(1) {\n  \t\tfont-size: 1.2em;\n\t}\n\n\t.keypadwrapper .keypad .content div span:nth-child(2) {\n \t\t font-size: 0.3em;\n\t}\n}", ""]);
+exports.push([module.i, "#container {\n\ttext-align: center;\n\twidth: 75%;\n\tmargin: 0 auto;\n\tmargin-top: 30px;\n}\n\n#logo {\n\twidth: 110px;\n}\n\n#container h1 {\n\tfont-family: 'Roboto', sans-serif;\n\tfont-weight: 100;\n\tcolor: #93959B;\n\tmargin: 0;\n}\n\n#container h2 {\n\tfont-family: 'Roboto', sans-serif;\n\tfont-weight: 100;\n\tcolor: #93959B;\n\tmargin: 20px;\n\tmargin-bottom: 40px;\n}\n\n\n/* Keypad */\n.keypadwrapper {\n  padding: 15px;\n  text-align: center;\n  width: 75%;\n  background: #fff;\n  color: #93959B;\n  margin: 0 auto;\n  margin-top: 40px;\n  -webkit-box-shadow: 0px 0px 53px -11px rgba(0,0,0,0.4);\n    moz-box-shadow: 0px 0px 53px -11px rgba(0,0,0,0.4);\n    box-shadow: 0px 0px 53px -11px rgba(0,0,0,0.4);\n}\n\n.keypadwrapper .keypad .numberline {\n  width: 100%;\n}\n\n.keypadwrapper .keypad .content {\n  display: inline-block;\n  margin: 0 8%;\n}\n\n.keypadwrapper .keypad .content div {\n  width: 4em;\n  height: 4em;\n  text-align: center;\n  border: 1px solid #93959B;\n  border-radius: 70px;\n  display: inline-block;\n  margin-top: 20px;\n  cursor: pointer;\n  -webkit-touch-callout: none;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none; /* Safari */\n  transition: background-color 300ms, color 300ms;\n}\n\n.keypadwrapper .keypad .content div span:nth-child(1) {\n  display: block;\n  font-size: 1.8em;\n  height: 1em;\n  margin-top: 0.2em;\n}\n\n.keypadwrapper .keypad .content div span:nth-child(2) {\n  font-size: 0.6em;\n}\n\n.keypadwrapper .keypad .content div:hover {\n  background-color: #4FB7F9;\n  color: #fff;\n  border: 1px solid #4FB7F9;\n  -webkit-touch-callout: none;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n}\n\n.keypadwrapper .keypad #linefour {\n\tmargin-bottom: 30px;\n}\n\n.keypadwrapper .keypad #linefour div span:nth-child(1) {\n  margin-top: 0.4em;\n}\n\n.nocircle {\n  width: auto !important;\n  border: none !important;\n  height: auto !important;\n}\n\n.led {\n  display: inline-block;\n  margin: 20px;\n  width: 25px;\n  height: 25px;\n  border-radius: 50%;\n}\n\n@media all and (max-width: 710px) {\n\n\t.keypadwrapper .keypad .content {\n  \t\tdisplay: inline-block;\n  \t\tmargin: 0 6%;\n\t\t}\n\n  \t.keypadwrapper .keypad .content div {\n  \t\twidth: 3em;\n  \t\theight: 3em;\n  \t}\n\n  \t.keypadwrapper .keypad .content div span:nth-child(1) {\n  \t\tfont-size: 1.2em;\n\t}\n\n\t.keypadwrapper .keypad .content div span:nth-child(2) {\n \t\t font-size: 0.3em;\n\t}\n}", ""]);
 
 // exports
 
@@ -34,7 +34,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<link href=\"https://fonts.googleapis.com/css?family=Roboto:100,300,400\" rel=\"stylesheet\">\n\n<div id=\"container\">\n  <!-- Header -->\n  <img id=\"logo\" src= \"{{logo}}\">\n  <h1>{{title}}</h1>\n\n  <!-- Keypad -->\n  <div class=\"keypadwrapper\">\n    <h2>{{header}}</h2>\n    <div class=\"keypad\">\n      <div id=\"lineone\" class=\"numberline\">\n        <div class=\"content\" (click)=\"padPress(1)\">\n          <div>\n            <span class=\"number\">1</span>\n            <span>___</span>\n          </div>\n        </div>\n        <div class=\"content\" (click)=\"padPress(2)\">\n          <div>\n            <span class=\"number\">2</span>\n            <span>ABC</span>\n          </div>\n        </div>\n        <div class=\"content\" (click)=\"padPress(3)\">\n          <div>\n            <span class=\"number\">3</span>\n            <span>DEF</span>\n          </div>\n        </div>\n      </div>\n      <div id=\"linetwo\" class=\"numberline\">\n        <div class=\"content\" (click)=\"padPress(4)\">\n          <div>\n            <span class=\"number\">4</span>\n            <span>GHI</span>\n          </div>\n        </div>\n        <div class=\"content\" (click)=\"padPress(5)\">\n          <div>\n            <span class=\"number\">5</span>\n            <span>JKL</span>\n          </div>\n        </div>\n        <div class=\"content\" (click)=\"padPress(6)\">\n          <div>\n            <span class=\"number\">6</span>\n            <span>MNO</span>\n          </div>\n        </div>\n      </div>\n      <div id=\"linethree\" class=\"numberline\">\n        <div class=\"content\" (click)=\"padPress(7)\">\n          <div>\n            <span class=\"number\">7</span>\n            <span>PQRS</span>\n          </div>\n        </div>\n        <div class=\"content\" (click)=\"padPress(8)\">\n          <div>\n            <span class=\"number\">8</span>\n            <span>TUV</span>\n          </div>\n        </div>\n        <div class=\"content\" (click)=\"padPress(9)\">\n          <div>\n            <span class=\"number\">9</span>\n            <span>WXYZ</span>\n          </div>\n        </div>\n      </div>\n      <div id=\"linefour\" class=\"numberline\">\n        <div class=\"content\" (click)=\"padPress('C')\">\n          <div>\n            <span class=\"number\">C</span>\n          </div>\n        </div>\n        <div class=\"content\" (click)=\"padPress(0)\">\n          <div>\n            <span class=\"number\">0</span>\n          </div>\n        </div>\n        <div class=\"content\" (click)=\"padPress('#')\">\n          <div>\n            <span class=\"number\">#</span>\n          </div>\n        </div>\n      </div>\n    </div>\n\n    <!-- LED -->\n    <div [@changeColor]='state' class=\"led\"></div>\n  </div>\n</div>"
+module.exports = "<link href=\"https://fonts.googleapis.com/css?family=Roboto:100,300,400\" rel=\"stylesheet\">\n\n<div id=\"container\">\n  <!-- Header -->\n  <img id=\"logo\" src= \"{{logo}}\">\n  <h1>{{title}}</h1>\n\n  <!-- Keypad -->\n  <div class=\"keypadwrapper\">\n    <h2>{{header}}</h2>\n    <div class=\"keypad\">\n      <div id=\"lineone\" class=\"numberline\">\n        <div class=\"content\" (click)=\"padPress(1)\">\n          <div>\n            <span class=\"number\">1</span>\n            <span>___</span>\n          </div>\n        </div>\n        <div class=\"content\" (click)=\"padPress(2)\">\n          <div>\n            <span class=\"number\">2</span>\n            <span>ABC</span>\n          </div>\n        </div>\n        <div class=\"content\" (click)=\"padPress(3)\">\n          <div>\n            <span class=\"number\">3</span>\n            <span>DEF</span>\n          </div>\n        </div>\n      </div>\n      <div id=\"linetwo\" class=\"numberline\">\n        <div class=\"content\" (click)=\"padPress(4)\">\n          <div>\n            <span class=\"number\">4</span>\n            <span>GHI</span>\n          </div>\n        </div>\n        <div class=\"content\" (click)=\"padPress(5)\">\n          <div>\n            <span class=\"number\">5</span>\n            <span>JKL</span>\n          </div>\n        </div>\n        <div class=\"content\" (click)=\"padPress(6)\">\n          <div>\n            <span class=\"number\">6</span>\n            <span>MNO</span>\n          </div>\n        </div>\n      </div>\n      <div id=\"linethree\" class=\"numberline\">\n        <div class=\"content\" (click)=\"padPress(7)\">\n          <div>\n            <span class=\"number\">7</span>\n            <span>PQRS</span>\n          </div>\n        </div>\n        <div class=\"content\" (click)=\"padPress(8)\">\n          <div>\n            <span class=\"number\">8</span>\n            <span>TUV</span>\n          </div>\n        </div>\n        <div class=\"content\" (click)=\"padPress(9)\">\n          <div>\n            <span class=\"number\">9</span>\n            <span>WXYZ</span>\n          </div>\n        </div>\n      </div>\n      <div id=\"linefour\" class=\"numberline\">\n        <div class=\"content\" (click)=\"padPress('C')\">\n          <div>\n            <span class=\"number\">C</span>\n          </div>\n        </div>\n        <div class=\"content\" (click)=\"padPress(0)\">\n          <div>\n            <span class=\"number\">0</span>\n          </div>\n        </div>\n        <div class=\"content\" (click)=\"padPress('#')\">\n          <div>\n            <span class=\"number\">#</span>\n          </div>\n        </div>\n      </div>\n    </div>\n\n    <!-- LED -->\n    <div [@changeColor]='red' class=\"led\"></div>\n    <div [@changeColor]='orange' class=\"led\"></div>\n    <div [@changeColor]='green' class=\"led\"></div>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -64,67 +64,96 @@ var AppComponent = (function () {
         this.title = 'Safehouse';
         this.header = 'Enter code';
         this.logo = '../assets/logo.png';
-        this.ledColor = 'red';
         this.code = '';
         this.auth = 1;
-        this.state = 'red';
+        this.level = 'red';
+        this.red = 'red';
+        this.orange = 'grey';
+        this.green = 'grey';
+        this.locked = false;
     }
-    AppComponent.prototype.clickMe = function () {
-        if (this.state === 'red') {
-            this.state = 'green';
-        }
-    };
     AppComponent.prototype.padPress = function (button) {
         var _this = this;
-        // Send code
-        if (button == '#') {
-            // Send first authentication
-            if (this.auth == 1) {
-                // Send code to server and validate
-                this.httpService.postCode(this.auth, parseInt(this.code)).subscribe(function (response) {
-                    _this.ledColor = response.result;
-                    // If code was correct, move to next auth step
-                    if (_this.ledColor == 'orange') {
-                        _this.auth = 2;
-                        _this.state = 'orange';
-                        _this.header = 'SMS sent';
-                    }
-                    else {
-                        _this.header = 'Incorrect, try again';
-                        // COME BACK
-                    }
-                });
+        if (!this.locked)
+            // Send code
+            if (button == '#') {
+                // Send first authentication
+                if (this.auth == 1) {
+                    // Send code to server and validate
+                    this.httpService.postCode(this.auth, parseInt(this.code)).subscribe(function (response) {
+                        _this.level = response.result;
+                        // If code was correct, move to next auth step
+                        if (_this.level == 'orange') {
+                            _this.auth = 2;
+                            _this.orange = 'orange';
+                            _this.red = 'grey';
+                            _this.header = 'SMS sent';
+                            setTimeout(function () { return _this.header = 'Enter second code'; }, 1000);
+                        }
+                        else if (_this.level == 'blocked') {
+                            var counter = 10;
+                            var intervalId = 0;
+                            // Blink all red 3 times and keep all red
+                            _this.header = "Blocked.";
+                            // Lock for 10 seconds
+                            _this.locked = true;
+                            intervalId = setInterval(function () {
+                                if (counter != 0) {
+                                    counter--;
+                                }
+                                else {
+                                    _this.locked = false;
+                                    clearInterval(intervalId);
+                                    _this.header = 'Enter code';
+                                    counter = 10;
+                                    _this.orange = 'grey';
+                                    _this.red = 'grey';
+                                }
+                            }, 1000);
+                        }
+                        else {
+                            _this.header = 'Incorrect, try again';
+                            // Make red blink
+                            setTimeout(function () { return _this.header = 'Enter code'; }, 1000);
+                        }
+                    });
+                }
+                // Send second authentication
+                if (this.auth == 2) {
+                    // Send code to server and validate
+                    this.httpService.postCode(this.auth, parseInt(this.code)).subscribe(function (response) {
+                        _this.level = response.result;
+                        // If code was correct, move to next auth step
+                        if (_this.level == 'green') {
+                            _this.header = 'Success';
+                            _this.green = 'green';
+                            _this.orange = 'grey;';
+                            setTimeout(function () { return _this.header = 'Enter code'; }, 2000);
+                            setTimeout(function () { return _this.red = 'red'; }, 2000);
+                            setTimeout(function () { return _this.green = 'grey'; }, 2000);
+                        }
+                        else {
+                            _this.header = 'Incorrect, try again';
+                            setTimeout(function () { return _this.header = 'Enter code'; }, 1000);
+                            // Make red blink
+                            _this.red = 'red';
+                            _this.orange = 'grey';
+                        }
+                    });
+                    // Reset to one no matter what (for next user or for failure)
+                    this.auth = 1;
+                }
+                // Reset code and authentication level
+                this.code = '';
             }
-            // Send second authentication
-            if (this.auth == 2) {
-                // Send code to server and validate
-                this.httpService.postCode(this.auth, parseInt(this.code)).subscribe(function (response) {
-                    _this.ledColor = response.result;
-                    // If code was correct, move to next auth step
-                    if (_this.ledColor == 'green') {
-                        _this.state = 'green';
-                        _this.header = 'Success';
-                    }
-                    else {
-                        _this.state = 'red';
-                        _this.header = 'Incorrect, try again';
-                        // COME BACK
-                    }
-                });
-                // Reset to one no matter what (for next user or for failure)
-                this.auth = 1;
+            else if (button == 'C') {
+                this.code = '';
+                this.header = 'Enter code';
             }
-            // Reset code and authentication level
-            this.code = '';
-        }
-        else if (button == 'C') {
-            this.code = '';
-            this.header = 'Enter code';
-        }
-        else {
-            this.code += button;
-            this.header = this.code;
-        }
+            else {
+                this.code += button;
+                this.header = this.code;
+            }
         console.log(this.code);
     };
     return AppComponent;
@@ -144,6 +173,9 @@ AppComponent = __decorate([
                 })),
                 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["j" /* state */])('green', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["h" /* style */])({
                     backgroundColor: '#99C356',
+                })),
+                __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["j" /* state */])('grey', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["h" /* style */])({
+                    backgroundColor: '#93959B',
                 })),
                 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["k" /* transition */])('* <=> *', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["l" /* animate */])('100ms ease-in')),
             ]),
