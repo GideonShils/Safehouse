@@ -18,7 +18,7 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
         backgroundColor: '#70C278',
       })),
       state('grey', style({
-        backgroundColor: '#93959B',
+        backgroundColor: '#d0d2d8',
       })),
       transition('* <=> *', animate('100ms ease-in')),
     ]),

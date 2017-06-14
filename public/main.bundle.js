@@ -210,7 +210,7 @@ AppComponent = __decorate([
                     backgroundColor: '#70C278',
                 })),
                 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["j" /* state */])('grey', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["h" /* style */])({
-                    backgroundColor: '#93959B',
+                    backgroundColor: '#d0d2d8',
                 })),
                 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["k" /* transition */])('* <=> *', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["l" /* animate */])('100ms ease-in')),
             ]),
