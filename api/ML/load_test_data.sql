@@ -1,4 +1,4 @@
-load data local infile '/home/jgozal/Desktop/repos/safehouse/ML/training_data.csv' into table entries 
+load data local infile '/home/jgozal/Desktop/repos/safehouse/api/ML/training_data.csv' into table entries 
 fields terminated by ','
   enclosed by '"'
   escaped by '"'

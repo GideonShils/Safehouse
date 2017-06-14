@@ -1,7 +1,7 @@
 'use strict'
 
 let con = require('../api/db').con;
-let sms = require('../utils/sms');
+let sms = require('../api/sms');
 let randomCode;
 
 let auth = function (req, res) {
